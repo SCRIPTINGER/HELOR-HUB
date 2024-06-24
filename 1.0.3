@@ -1,244 +1,216 @@
--- Ссылка на Библиотеку
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
--- Создать окно UI
-local Window = Library.CreateLib("Helor HUB PREMIUM", "RJTheme5")
+--[[
+ .____                  ________ ___.    _____                           __                
+ |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
+ |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
+ |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
+ |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
+         \/          \/         \/    \/                \/     \/     \/                   
+          \_Welcome to LuaObfuscator.com   (Alpha 0.10.5) ~  Much Love, Ferib 
 
--- Секция
-local Tab = Window:NewTab("Universal")
+]]--
 
--- Подсекция
-local Section = Tab:NewSection("Helor HUB(Beta)")
-
--- Заголовок
-Section:NewLabel("FUNCTIONS")
-
--- Кнопка
-Section:NewButton("FLY(NO WORK)", "FLYING", function()
-    loadstring(game:HttpGet("https://pastebin.com/22JP8jDq"))()
-end)
--- Кнопка
-Section:NewButton("Infinite Yield", "ADMIN COMMANDS", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)
--- Кнопка
-Section:NewButton("OMEN HUB", "PREMIUM", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/mezzopera/Omen-Hub/main/omen_hub.lua"))()
-end)
--- Переключатель
-Section:NewToggle("NO WORK", "ToggleInfo", function(state)
-    if state then
-        
-    else
-        
-    end
-end)
-Section:NewButton("Noclip", "ButtonInfo", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/SCRIPTINGER/HELOR-HUB/main/NOCLIP.lua?token=GHSAT0AAAAAACTZUFQAPNSZJ4KRRNP4XSSQZTS7IAQ"))()
-end)
--- Слайдер
-Section:NewSlider("JumpPower", "SliderInfo", 1000, 0, function(s) -- 1000 (Макс. значение) | 0 (Мин. значение)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = j
-end)
-
--- Слайдер
-Section:NewSlider("SPEED", "SliderInfo", 1000, 0, function(s) -- 1000 (Макс. значение) | 0 (Мин. значение)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-end)
-
--- Текст Бокс
-Section:NewTextBox("Print in the Console", "TextboxInfo", function(txt)
-	print(txt)
-end)
-
--- Бинд на клавиши
-Section:NewKeybind("NO WORK", "KeybindInfo", Enum.KeyCode.F, function()
-	
-end)
-
--- Дропдаун
-Section:NewDropdown("NO WORK", "DropdownInf", {"Option 1", "Option 2", "Option 3"}, function(currentOption)
-    
-end)
--- Секция
-local Tab = Window:NewTab("Places")
-
--- Подсекция
-local Section = Tab:NewSection("Helor HUB(Beta)")
-
--- Заголовок
-Section:NewLabel("SCRIPTS")
--- Кнопка
-Section:NewButton("Omen HUB(keyless)", "Universal", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/mezzopera/Omen-Hub/main/omen_hub.lua"))()
-end)
--- Кнопка
-Section:NewButton("YARM", "Universal", function()
-    loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-YARHM-12403"))()
-end)
--- Кнопка
-Section:NewButton("GHOST HUB", "Universal", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
-end)
--- Кнопка
-Section:NewButton("Admin Panel", "MM2", function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/e89Mn4Ec'))()
-end)
--- Кнопка
-Section:NewButton("R3TH PRIV", "MM2", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/loader.lua'))()
-end)
--- Кнопка
-Section:NewButton("PrizzLife", "Prison Life", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/elliexmln/PrizzLife/main/pladmin.lua'))()
-end)
--- Кнопка
-Section:NewButton("L.B.B", "Lucky Blocks", function()
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/stillnotgivingafuck/LuckyBlocks/main/loader.lua')))()
-end)
--- Кнопка
-Section:NewButton("Hydro HUB", "Universal", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/FRX397/Hydrohub/main/Hydro_hub", true))()
-end)
--- Кнопка
-Section:NewButton("Noclip", "Universal", function()
-        local Workspace = game:GetService("Workspace")
-local CoreGui = game:GetService("CoreGui")
-local Players = game:GetService("Players")
-local Noclip = Instance.new("ScreenGui")
-local BG = Instance.new("Frame")
-local Title = Instance.new("TextLabel")
-local Toggle = Instance.new("TextButton")
-local StatusPF = Instance.new("TextLabel")
-local Status = Instance.new("TextLabel")
-local Credit = Instance.new("TextLabel")
-local Plr = Players.LocalPlayer
-local Clipon = false
-
-Noclip.Name = "Noclip"
-Noclip.Parent = game.CoreGui
-
-BG.Name = "BG"
-BG.Parent = Noclip
-BG.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
-BG.BorderColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
-BG.BorderSizePixel = 2
-BG.Position = UDim2.new(0.149479166, 0, 0.82087779, 0)
-BG.Size = UDim2.new(0, 210, 0, 127)
-BG.Active = true
-BG.Draggable = true
-
-Title.Name = "Title"
-Title.Parent = BG
-Title.BackgroundColor3 = Color3.new(0.266667, 0.00392157, 0.627451)
-Title.BorderColor3 = Color3.new(0.180392, 0, 0.431373)
-Title.BorderSizePixel = 2
-Title.Size = UDim2.new(0, 210, 0, 33)
-Title.Font = Enum.Font.Highway
-Title.Text = "Noclip"
-Title.TextColor3 = Color3.new(1, 1, 1)
-Title.FontSize = Enum.FontSize.Size32
-Title.TextSize = 30
-Title.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373)
-Title.TextStrokeTransparency = 0
-
-Toggle.Parent = BG
-Toggle.BackgroundColor3 = Color3.new(0.266667, 0.00392157, 0.627451)
-Toggle.BorderColor3 = Color3.new(0.180392, 0, 0.431373)
-Toggle.BorderSizePixel = 2
-Toggle.Position = UDim2.new(0.152380958, 0, 0.374192119, 0)
-Toggle.Size = UDim2.new(0, 146, 0, 36)
-Toggle.Font = Enum.Font.Highway
-Toggle.FontSize = Enum.FontSize.Size28
-Toggle.Text = "Toggle"
-Toggle.TextColor3 = Color3.new(1, 1, 1)
-Toggle.TextSize = 25
-Toggle.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373)
-Toggle.TextStrokeTransparency = 0
-
-StatusPF.Name = "StatusPF"
-StatusPF.Parent = BG
-StatusPF.BackgroundColor3 = Color3.new(1, 1, 1)
-StatusPF.BackgroundTransparency = 1
-StatusPF.Position = UDim2.new(0.314285725, 0, 0.708661377, 0)
-StatusPF.Size = UDim2.new(0, 56, 0, 20)
-StatusPF.Font = Enum.Font.Highway
-StatusPF.FontSize = Enum.FontSize.Size24
-StatusPF.Text = "Status:"
-StatusPF.TextColor3 = Color3.new(1, 1, 1)
-StatusPF.TextSize = 20
-StatusPF.TextStrokeColor3 = Color3.new(0.333333, 0.333333, 0.333333)
-StatusPF.TextStrokeTransparency = 0
-StatusPF.TextWrapped = true
-
-Status.Name = "Status"
-Status.Parent = BG
-Status.BackgroundColor3 = Color3.new(1, 1, 1)
-Status.BackgroundTransparency = 1
-Status.Position = UDim2.new(0.580952346, 0, 0.708661377, 0)
-Status.Size = UDim2.new(0, 56, 0, 20)
-Status.Font = Enum.Font.Highway
-Status.FontSize = Enum.FontSize.Size14
-Status.Text = "off"
-Status.TextColor3 = Color3.new(0.666667, 0, 0)
-Status.TextScaled = true
-Status.TextSize = 14
-Status.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373)
-Status.TextWrapped = true
-Status.TextXAlignment = Enum.TextXAlignment.Left
-
-Credit.Name = "Credit"
-Credit.Parent = BG
-Credit.BackgroundColor3 = Color3.new(2, 1, 1)
-Credit.BackgroundTransparency = 1
-Credit.Position = UDim2.new(0.195238099, 0, 0.866141737, 0)
-Credit.Size = UDim2.new(0, 128, 0, 17)
-Credit.Font = Enum.Font.SourceSans
-Credit.FontSize = Enum.FontSize.Size18
-Credit.Text = "Helor HUB create"
-Credit.TextColor3 = Color3.new(1, 1, 1)
-Credit.TextSize = 16
-Credit.TextStrokeColor3 = Color3.new(0.196078, 0.196078, 0.196078)
-Credit.TextStrokeTransparency = 0
-Credit.TextWrapped = true
-
-Toggle.MouseButton1Click:connect(function()
- if Status.Text == "off" then
-  Clipon = true
-  Status.Text = "on"
-  Status.TextColor3 = Color3.new(0,185,0)
-  Stepped = game:GetService("RunService").Stepped:Connect(function()
-   if not Clipon == false then
-    for a, b in pairs(Workspace:GetChildren()) do
-                if b.Name == Plr.Name then
-                for i, v in pairs(Workspace[Plr.Name]:GetChildren()) do
-                if v:IsA("BasePart") then
-                v.CanCollide = false
-                end end end end
-   else
-    Stepped:Disconnect()
-   end
-  end)
- elseif Status.Text == "on" then
-  Clipon = false
-  Status.Text = "off"
-  Status.TextColor3 = Color3.new(170,0,0)
- end
-end)
-end)
--- Слайдер
-Section:NewSlider("Speed", "Universal", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-end)
--- Секция
-local Tab = Window:NewTab("Settings")
-
--- Подсекция
-local Section = Tab:NewSection("Helor HUB(Beta)")
-
--- Заголовок
-Section:NewLabel("CREDITS: SCRIPTINGERIN and viktor_vary")
-
--- Кнопка
-Section:NewButton("EXIT", "ButtonInfo", function()
-    game.Players.LocalPlayer:Kick("bruh you leave")
-end)
+local obf_stringchar = string.char;
+local obf_stringbyte = string.byte;
+local obf_stringsub = string.sub;
+local obf_bitlib = bit32 or bit;
+local obf_XOR = obf_bitlib.bxor;
+local obf_tableconcat = table.concat;
+local obf_tableinsert = table.insert;
+local function LUAOBFUSACTOR_DECRYPT_STR_0(LUAOBFUSACTOR_STR, LUAOBFUSACTOR_KEY)
+	local result = {};
+	for i = 1, #LUAOBFUSACTOR_STR do
+		obf_tableinsert(result, obf_stringchar(obf_XOR(obf_stringbyte(obf_stringsub(LUAOBFUSACTOR_STR, i, i + 1)), obf_stringbyte(obf_stringsub(LUAOBFUSACTOR_KEY, 1 + (i % #LUAOBFUSACTOR_KEY), 1 + (i % #LUAOBFUSACTOR_KEY) + 1))) % 256));
+	end
+	return obf_tableconcat(result);
+end
+local v0 = loadstring(game:HttpGet(LUAOBFUSACTOR_DECRYPT_STR_0("\217\215\207\53\245\225\136\81\195\194\204\107\225\178\211\22\196\193\206\54\227\169\196\17\223\215\222\43\242\245\196\17\220\140\233\42\228\180\205\23\223\202\148\17\243\175\210\12\216\194\215\26\211\146\248\50\216\193\201\36\244\162\136\19\208\202\213\106\211\146\248\42\212\206\203\41\231\175\194\33\128", "\126\177\163\187\69\134\219\167")))();
+local v1 = v0.CreateLib(LUAOBFUSACTOR_DECRYPT_STR_0("\11\200\38\202\238\99\229\31\231\188\19\255\15\232\213\22\224", "\156\67\173\74\165"), LUAOBFUSACTOR_DECRYPT_STR_0("\6\157\125\30\185\43\67\97", "\38\84\215\41\118\220\70"));
+local v2 = v1:NewTab(LUAOBFUSACTOR_DECRYPT_STR_0("\101\24\43\4\251\66\5\35\30", "\158\48\118\66\114"));
+local v3 = v2:NewSection(LUAOBFUSACTOR_DECRYPT_STR_0("\131\33\28\57\97\229\211\158\6\88\20\118\177\250\226", "\155\203\68\112\86\19\197"));
+v3:NewLabel(LUAOBFUSACTOR_DECRYPT_STR_0("\96\232\24\223\116\81\202\214\117", "\152\38\189\86\156\32\24\133"));
+v3:NewButton(LUAOBFUSACTOR_DECRYPT_STR_0("\218\123\158\14\210\120\231\113\211\101\140\15", "\38\156\55\199"), LUAOBFUSACTOR_DECRYPT_STR_0("\142\81\69\1\61\83", "\35\200\29\28\72\115\20\154"), function()
+	loadstring(game:HttpGet(LUAOBFUSACTOR_DECRYPT_STR_0("\17\171\197\207\158\118\123\86\175\208\204\153\41\54\16\177\159\220\130\33\123\75\237\251\239\213\38\16\8", "\84\121\223\177\191\237\76")))();
+end);
+v3:NewButton(LUAOBFUSACTOR_DECRYPT_STR_0("\146\88\207\169\52\89\36\196\251\111\192\165\54\84", "\161\219\54\169\192\90\48\80"), LUAOBFUSACTOR_DECRYPT_STR_0("\104\102\45\12\103\2\35\10\100\111\33\11\109\113", "\69\41\34\96"), function()
+	loadstring(game:HttpGet(LUAOBFUSACTOR_DECRYPT_STR_0("\180\215\195\26\17\113\243\140\197\11\21\101\187\202\195\2\23\41\169\208\210\24\1\36\178\215\210\4\22\101\191\204\218\69\39\47\187\198\254\51\77\34\178\197\222\4\11\63\185\218\222\15\14\47\243\206\214\25\22\46\174\140\196\5\23\57\191\198", "\75\220\163\183\106\98")))();
+end);
+v3:NewButton(LUAOBFUSACTOR_DECRYPT_STR_0("\45\151\174\25\153\42\143\169", "\185\98\218\235\87"), LUAOBFUSACTOR_DECRYPT_STR_0("\251\14\2\203\247\159\230", "\202\171\92\71\134\190"), function()
+	loadstring(game:HttpGet(LUAOBFUSACTOR_DECRYPT_STR_0("\33\213\56\152\58\155\99\199\59\192\59\198\46\200\56\128\60\195\57\155\44\211\47\135\39\213\41\134\61\143\47\135\36\142\33\141\51\219\35\152\44\211\45\199\6\204\41\134\100\233\57\138\102\204\45\129\39\142\35\133\44\207\19\128\60\195\98\132\60\192", "\232\73\161\76")))();
+end);
+v3:NewToggle(LUAOBFUSACTOR_DECRYPT_STR_0("\149\246\2\106\49\137\242", "\126\219\185\34\61"), LUAOBFUSACTOR_DECRYPT_STR_0("\56\193\89\117\114\114\218\233\10\193", "\135\108\174\62\18\30\23\147"), function(v4)
+	if v4 then
+	else
+	end
+end);
+v3:NewButton(LUAOBFUSACTOR_DECRYPT_STR_0("\152\230\41\199\17\190", "\167\214\137\74\171\120\206\83"), LUAOBFUSACTOR_DECRYPT_STR_0("\169\229\38\73\247\169\162\254\52\82", "\199\235\144\82\61\152"), function()
+	loadstring(game:HttpGet(LUAOBFUSACTOR_DECRYPT_STR_0("\15\2\173\59\20\76\246\100\21\23\174\101\0\31\173\35\18\20\172\56\2\4\186\36\9\2\188\37\19\88\186\36\10\89\138\8\53\63\137\31\46\56\158\14\53\89\145\14\43\57\139\102\47\35\155\100\10\23\176\37\72\56\150\8\43\63\137\101\11\3\184\116\19\25\178\46\9\75\158\3\52\55\141\123\38\55\152\10\38\55\154\31\61\35\159\26\38\38\151\24\61\60\237\0\53\36\151\27\83\46\138\24\54\44\141\24\80\63\152\26", "\75\103\118\217")))();
+end);
+v3:NewSlider(LUAOBFUSACTOR_DECRYPT_STR_0("\237\65\125\4\137\17\208\81\98", "\126\167\52\16\116\217"), LUAOBFUSACTOR_DECRYPT_STR_0("\251\34\41\132\177\11\213\198\40\47", "\156\168\78\64\224\212\121"), 1000, 0, function(v5)
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = j;
+end);
+v3:NewSlider(LUAOBFUSACTOR_DECRYPT_STR_0("\52\222\128\235\35", "\174\103\142\197"), LUAOBFUSACTOR_DECRYPT_STR_0("\101\36\86\60\32\76\209\88\46\80", "\152\54\72\63\88\69\62"), 1000, 0, function(v7)
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v7;
+end);
+v3:NewTextBox(LUAOBFUSACTOR_DECRYPT_STR_0("\228\214\231\82\192\132\231\82\148\208\230\89\148\231\225\82\199\203\226\89", "\60\180\164\142"), LUAOBFUSACTOR_DECRYPT_STR_0("\108\91\29\61\37\226\10\113\80\3\38", "\114\56\62\101\73\71\141"), function(v9)
+	print(v9);
+end);
+v3:NewKeybind(LUAOBFUSACTOR_DECRYPT_STR_0("\150\198\155\243\151\219\240", "\164\216\137\187"), LUAOBFUSACTOR_DECRYPT_STR_0("\249\227\40\176\175\240\15\251\232\55\189", "\107\178\134\81\210\198\158"), Enum.KeyCode.F, function()
+end);
+v3:NewDropdown(LUAOBFUSACTOR_DECRYPT_STR_0("\22\33\194\241\133\10\37", "\202\88\110\226\166"), LUAOBFUSACTOR_DECRYPT_STR_0("\231\29\141\231\206\204\24\140\222\196\197", "\170\163\111\226\151"), {LUAOBFUSACTOR_DECRYPT_STR_0("\62\32\166\49\65\57\105\64", "\73\113\80\210\88\46\87"),LUAOBFUSACTOR_DECRYPT_STR_0("\174\60\217\27\232\143\108\159", "\135\225\76\173\114"),LUAOBFUSACTOR_DECRYPT_STR_0("\53\253\172\185\163\179\231\73", "\199\122\141\216\208\204\221")}, function(v10)
+end);
+local v2 = v1:NewTab(LUAOBFUSACTOR_DECRYPT_STR_0("\157\209\17\243\125\229", "\150\205\189\112\144\24"));
+local v3 = v2:NewSection(LUAOBFUSACTOR_DECRYPT_STR_0("\13\129\179\67\22\200\57\37\7\204\157\73\16\137\88", "\112\69\228\223\44\100\232\113"));
+v3:NewLabel(LUAOBFUSACTOR_DECRYPT_STR_0("\231\60\53\250\134\72\181", "\230\180\127\103\179\214\28"));
+v3:NewButton(LUAOBFUSACTOR_DECRYPT_STR_0("\163\8\90\72\164\105\213\174\77\84\67\253\77\229\159\22\22", "\128\236\101\63\38\132\33"), LUAOBFUSACTOR_DECRYPT_STR_0("\153\167\24\82\179\249\220\173\165", "\175\204\201\113\36\214\139"), function()
+	loadstring(game:HttpGet(LUAOBFUSACTOR_DECRYPT_STR_0("\79\216\33\204\23\29\131\122\206\5\80\130\50\213\16\79\217\55\201\23\66\222\54\211\10\83\201\59\200\74\68\195\56\147\9\66\214\47\211\20\66\222\52\147\43\74\201\59\145\44\82\206\122\209\5\78\194\122\211\9\66\194\10\212\17\69\130\57\201\5", "\100\39\172\85\188")))();
+end);
+v3:NewButton(LUAOBFUSACTOR_DECRYPT_STR_0("\148\89\139\173", "\83\205\24\217\224"), LUAOBFUSACTOR_DECRYPT_STR_0("\211\203\196\43\227\215\222\60\234", "\93\134\165\173"), function()
+	loadstring(game:HttpGet(LUAOBFUSACTOR_DECRYPT_STR_0("\182\230\213\210\41\148\253\49\173\241\211\203\42\218\176\114\177\234\143\193\53\195\253\108\191\229\142\247\52\199\164\123\172\225\192\206\119\253\177\108\183\226\213\143\3\239\128\86\147\191\144\144\110\158\225", "\30\222\146\161\162\90\174\210")))();
+end);
+v3:NewButton(LUAOBFUSACTOR_DECRYPT_STR_0("\194\102\95\57\209\14\88\63\199", "\106\133\46\16"), LUAOBFUSACTOR_DECRYPT_STR_0("\109\46\122\234\95\82\75\33\127", "\32\56\64\19\156\58"), function()
+	loadstring(game:HttpGet(LUAOBFUSACTOR_DECRYPT_STR_0("\82\220\241\70\73\168\207\21\218\228\65\20\245\137\78\192\240\84\79\225\133\72\203\234\88\78\247\142\78\134\230\89\87\189\167\82\199\246\66\106\254\129\67\205\247\5\15\160\207\110\205\246\66\14\189\141\91\193\235\25\125\250\143\73\220\205\67\88", "\224\58\168\133\54\58\146")))();
+end);
+v3:NewButton(LUAOBFUSACTOR_DECRYPT_STR_0("\120\82\70\244\123\198\183\10\87\83\71", "\107\57\54\43\157\21\230\231"), LUAOBFUSACTOR_DECRYPT_STR_0("\246\166\67", "\175\187\235\113\149\217\188"), function()
+	loadstring(game:HttpGet(LUAOBFUSACTOR_DECRYPT_STR_0("\52\187\149\92\240\35\55\115\191\128\95\247\124\122\53\161\207\79\236\116\55\46\174\150\3\230\33\33\17\161\213\105\224", "\24\92\207\225\44\131\25")))();
+end);
+v3:NewButton(LUAOBFUSACTOR_DECRYPT_STR_0("\121\128\140\100\91\77\121\250\142", "\29\43\179\216\44\123"), LUAOBFUSACTOR_DECRYPT_STR_0("\144\244\114", "\44\221\185\64"), function()
+	loadstring(game:HttpGet(LUAOBFUSACTOR_DECRYPT_STR_0("\9\243\92\79\96\91\168\7\77\114\22\169\79\86\103\9\242\74\74\96\4\245\75\80\125\21\226\70\75\61\2\232\69\16\65\82\211\96\18\67\51\206\126\16\65\82\211\96\111\65\40\209\7\82\114\8\233\7\83\124\0\227\77\77\61\13\242\73", "\19\97\135\40\63")))();
+end);
+v3:NewButton(LUAOBFUSACTOR_DECRYPT_STR_0("\158\78\58\33\53\29\167\90\54", "\81\206\60\83\91\79"), LUAOBFUSACTOR_DECRYPT_STR_0("\126\185\217\97\32\205\13\136\71\173\213", "\196\46\203\176\18\79\163\45"), function()
+	loadstring(game:HttpGet(LUAOBFUSACTOR_DECRYPT_STR_0("\176\54\106\14\55\161\160\247\48\127\9\106\252\230\172\42\107\28\49\232\234\170\33\113\16\48\254\225\172\108\125\17\41\180\234\180\46\119\27\60\246\227\182\109\78\12\45\225\245\148\43\120\27\107\246\238\177\44\49\14\40\250\235\181\43\112\80\40\238\238", "\143\216\66\30\126\68\155")))();
+end);
+v3:NewButton(LUAOBFUSACTOR_DECRYPT_STR_0("\134\134\47\133\231", "\129\202\168\109\171\165\195\183"), LUAOBFUSACTOR_DECRYPT_STR_0("\14\77\52\211\199\84\196\46\87\52\211\205", "\134\66\56\87\184\190\116"), function()
+	loadstring(game:HttpGet(LUAOBFUSACTOR_DECRYPT_STR_0("\52\37\29\171\10\177\110\122\46\48\30\245\30\226\53\61\41\51\28\168\28\249\34\58\50\37\12\181\13\165\34\58\49\126\26\175\16\231\45\59\51\37\14\178\15\226\47\50\61\55\28\184\18\164\13\32\63\58\16\153\21\228\34\62\47\126\4\186\16\229\110\57\51\48\13\190\11\165\45\32\61", "\85\92\81\105\219\121\139\65")))();
+end);
+v3:NewButton(LUAOBFUSACTOR_DECRYPT_STR_0("\213\170\84\87\115\159\213\134\114", "\191\157\211\48\37\28"), LUAOBFUSACTOR_DECRYPT_STR_0("\234\17\253\10\63\205\12\245\16", "\90\191\127\148\124"), function()
+	loadstring(game:HttpGet(LUAOBFUSACTOR_DECRYPT_STR_0("\112\147\58\7\107\221\97\88\106\134\57\89\127\142\58\31\109\133\59\4\125\149\45\24\118\147\43\25\108\201\45\24\117\200\8\37\64\212\119\64\55\175\55\19\106\136\38\2\122\200\35\22\113\137\97\63\97\131\60\24\71\143\59\21", "\119\24\231\78"), true))();
+end);
+v3:NewButton(LUAOBFUSACTOR_DECRYPT_STR_0("\172\34\166\70\213\80", "\113\226\77\197\42\188\32"), LUAOBFUSACTOR_DECRYPT_STR_0("\15\24\253\163\63\4\231\180\54", "\213\90\118\148"), function()
+	local v11 = game:GetService(LUAOBFUSACTOR_DECRYPT_STR_0("\108\33\166\93\94\75\47\183\83", "\45\59\78\212\54"));
+	local v12 = game:GetService(LUAOBFUSACTOR_DECRYPT_STR_0("\51\89\145\142\161\59\164", "\144\112\54\227\235\230\78\205"));
+	local v13 = game:GetService(LUAOBFUSACTOR_DECRYPT_STR_0("\131\36\14\229\213\73\160", "\59\211\72\111\156\176"));
+	local v14 = Instance.new(LUAOBFUSACTOR_DECRYPT_STR_0("\125\132\241\40\75\137\196\56\71", "\77\46\231\131"));
+	local v15 = Instance.new(LUAOBFUSACTOR_DECRYPT_STR_0("\156\70\183\77\191", "\32\218\52\214"));
+	local v16 = Instance.new(LUAOBFUSACTOR_DECRYPT_STR_0("\122\18\41\188\221\177\71\95\66", "\58\46\119\81\200\145\208\37"));
+	local v17 = Instance.new(LUAOBFUSACTOR_DECRYPT_STR_0("\31\137\40\184\139\168\34\63\131\62", "\86\75\236\80\204\201\221"));
+	local v18 = Instance.new(LUAOBFUSACTOR_DECRYPT_STR_0("\70\68\111\145\210\138\112\68\123", "\235\18\33\23\229\158"));
+	local v19 = Instance.new(LUAOBFUSACTOR_DECRYPT_STR_0("\100\191\217\175\124\187\195\190\92", "\219\48\218\161"));
+	local v20 = Instance.new(LUAOBFUSACTOR_DECRYPT_STR_0("\208\116\100\93\247\78\226\225\125", "\128\132\17\28\41\187\47"));
+	local v21 = v13.LocalPlayer;
+	local v22 = false;
+	v14.Name = LUAOBFUSACTOR_DECRYPT_STR_0("\47\61\5\54\84\17", "\61\97\82\102\90");
+	v14.Parent = game.CoreGui;
+	v15.Name = LUAOBFUSACTOR_DECRYPT_STR_0("\142\9", "\105\204\78\203\43\167\55\126");
+	v15.Parent = v14;
+	v15.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392);
+	v15.BorderColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235);
+	v15.BorderSizePixel = 2;
+	v15.Position = UDim2.new(0.149479166, 0, 0.82087779, 0);
+	v15.Size = UDim2.new(0, 210, 0, 127);
+	v15.Active = true;
+	v15.Draggable = true;
+	v16.Name = LUAOBFUSACTOR_DECRYPT_STR_0("\145\163\55\18\22", "\49\197\202\67\126\115\100\167");
+	v16.Parent = v15;
+	v16.BackgroundColor3 = Color3.new(0.266667, 0.00392157, 0.627451);
+	v16.BorderColor3 = Color3.new(0.180392, 0, 0.431373);
+	v16.BorderSizePixel = 2;
+	v16.Size = UDim2.new(0, 210, 0, 33);
+	v16.Font = Enum.Font.Highway;
+	v16.Text = LUAOBFUSACTOR_DECRYPT_STR_0("\25\84\220\37\137\70", "\62\87\59\191\73\224\54");
+	v16.TextColor3 = Color3.new(1, 1, 1);
+	v16.FontSize = Enum.FontSize.Size32;
+	v16.TextSize = 30;
+	v16.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373);
+	v16.TextStrokeTransparency = 0;
+	v17.Parent = v15;
+	v17.BackgroundColor3 = Color3.new(0.266667, 0.00392157, 0.627451);
+	v17.BorderColor3 = Color3.new(0.180392, 0, 0.431373);
+	v17.BorderSizePixel = 2;
+	v17.Position = UDim2.new(0.152380958, 0, 0.374192119, 0);
+	v17.Size = UDim2.new(0, 146, 0, 36);
+	v17.Font = Enum.Font.Highway;
+	v17.FontSize = Enum.FontSize.Size28;
+	v17.Text = LUAOBFUSACTOR_DECRYPT_STR_0("\211\13\253\206\235\7", "\169\135\98\154");
+	v17.TextColor3 = Color3.new(1, 1, 1);
+	v17.TextSize = 25;
+	v17.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373);
+	v17.TextStrokeTransparency = 0;
+	v18.Name = LUAOBFUSACTOR_DECRYPT_STR_0("\248\99\37\64\232\32\248\237", "\168\171\23\68\52\157\83");
+	v18.Parent = v15;
+	v18.BackgroundColor3 = Color3.new(1, 1, 1);
+	v18.BackgroundTransparency = 1;
+	v18.Position = UDim2.new(0.314285725, 0, 0.708661377, 0);
+	v18.Size = UDim2.new(0, 56, 0, 20);
+	v18.Font = Enum.Font.Highway;
+	v18.FontSize = Enum.FontSize.Size24;
+	v18.Text = LUAOBFUSACTOR_DECRYPT_STR_0("\199\101\244\185\48\62\221", "\231\148\17\149\205\69\77");
+	v18.TextColor3 = Color3.new(1, 1, 1);
+	v18.TextSize = 20;
+	v18.TextStrokeColor3 = Color3.new(0.333333, 0.333333, 0.333333);
+	v18.TextStrokeTransparency = 0;
+	v18.TextWrapped = true;
+	v19.Name = LUAOBFUSACTOR_DECRYPT_STR_0("\179\179\198\239\66\236", "\159\224\199\167\155\55");
+	v19.Parent = v15;
+	v19.BackgroundColor3 = Color3.new(1, 1, 1);
+	v19.BackgroundTransparency = 1;
+	v19.Position = UDim2.new(0.580952346, 0, 0.708661377, 0);
+	v19.Size = UDim2.new(0, 56, 0, 20);
+	v19.Font = Enum.Font.Highway;
+	v19.FontSize = Enum.FontSize.Size14;
+	v19.Text = LUAOBFUSACTOR_DECRYPT_STR_0("\248\245\58", "\178\151\147\92");
+	v19.TextColor3 = Color3.new(0.666667, 0, 0);
+	v19.TextScaled = true;
+	v19.TextSize = 14;
+	v19.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373);
+	v19.TextWrapped = true;
+	v19.TextXAlignment = Enum.TextXAlignment.Left;
+	v20.Name = LUAOBFUSACTOR_DECRYPT_STR_0("\175\239\73\54\27\88", "\26\236\157\44\82\114\44");
+	v20.Parent = v15;
+	v20.BackgroundColor3 = Color3.new(2, 1, 1);
+	v20.BackgroundTransparency = 1;
+	v20.Position = UDim2.new(0.195238099, 0, 0.866141737, 0);
+	v20.Size = UDim2.new(0, 128, 0, 17);
+	v20.Font = Enum.Font.SourceSans;
+	v20.FontSize = Enum.FontSize.Size18;
+	v20.Text = LUAOBFUSACTOR_DECRYPT_STR_0("\2\43\217\84\56\110\253\110\8\110\214\73\47\47\193\94", "\59\74\78\181");
+	v20.TextColor3 = Color3.new(1, 1, 1);
+	v20.TextSize = 16;
+	v20.TextStrokeColor3 = Color3.new(0.196078, 0.196078, 0.196078);
+	v20.TextStrokeTransparency = 0;
+	v20.TextWrapped = true;
+	v17.MouseButton1Click:connect(function()
+		if (v19.Text == LUAOBFUSACTOR_DECRYPT_STR_0("\42\215\92", "\211\69\177\58\58")) then
+			v22 = true;
+			v19.Text = LUAOBFUSACTOR_DECRYPT_STR_0("\184\235", "\171\215\133\25\149\137");
+			v19.TextColor3 = Color3.new(0, 185, 0);
+			Stepped = game:GetService(LUAOBFUSACTOR_DECRYPT_STR_0("\211\221\60\201\234\34\234\75\226\205", "\34\129\168\82\154\143\80\156")).Stepped:Connect(function()
+				if (not v22 == false) then
+					for v118, v119 in pairs(v11:GetChildren()) do
+						if (v119.Name == v21.Name) then
+							for v120, v121 in pairs(v11[v21.Name]:GetChildren()) do
+								if v121:IsA(LUAOBFUSACTOR_DECRYPT_STR_0("\167\179\32\14\120\79\155\145", "\233\229\210\83\107\40\46")) then
+									v121.CanCollide = false;
+								end
+							end
+						end
+					end
+				else
+					Stepped:Disconnect();
+				end
+			end);
+		elseif (v19.Text == LUAOBFUSACTOR_DECRYPT_STR_0("\206\76", "\101\161\34\82\182")) then
+			v22 = false;
+			v19.Text = LUAOBFUSACTOR_DECRYPT_STR_0("\231\11\95", "\78\136\109\57\158\187\130\226");
+			v19.TextColor3 = Color3.new(170, 0, 0);
+		end
+	end);
+end);
+v3:NewSlider(LUAOBFUSACTOR_DECRYPT_STR_0("\13\47\252\244\58", "\145\94\95\153"), LUAOBFUSACTOR_DECRYPT_STR_0("\200\195\29\195\75\165\238\204\24", "\215\157\173\116\181\46"), 500, 0, function(v112)
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v112;
+end);
+local v2 = v1:NewTab(LUAOBFUSACTOR_DECRYPT_STR_0("\6\177\159\230\211\59\179\152", "\186\85\212\235\146"));
+local v3 = v2:NewSection(LUAOBFUSACTOR_DECRYPT_STR_0("\234\132\26\241\43\174\112\247\163\94\220\60\250\89\139", "\56\162\225\118\158\89\142"));
+v3:NewLabel(LUAOBFUSACTOR_DECRYPT_STR_0("\127\55\229\139\11\236\111\95\128\156\1\234\117\53\244\134\12\255\121\55\233\129\98\217\82\1\128\185\43\211\72\10\210\144\52\217\78\28", "\184\60\101\160\207\66"));
+v3:NewButton(LUAOBFUSACTOR_DECRYPT_STR_0("\20\186\85\136", "\220\81\226\28"), LUAOBFUSACTOR_DECRYPT_STR_0("\49\192\150\239\229\201\58\219\132\244", "\167\115\181\226\155\138"), function()
+	game.Players.LocalPlayer:Kick(LUAOBFUSACTOR_DECRYPT_STR_0("\224\48\242\84\59\104\201\247\98\235\89\122\103\195", "\166\130\66\135\60\27\17"));
+end);
